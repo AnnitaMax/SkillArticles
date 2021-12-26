@@ -10,11 +10,13 @@ class CheckableImageView @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : androidx.appcompat.widget.AppCompatImageView(context, attrs, defStyleAttr), Checkable, View.OnClickListener {
+) : androidx.appcompat.widget.AppCompatImageView(context, attrs, defStyleAttr), Checkable, View.OnClickListener{
+    //  Было
+    // ImageView(context, attrs, defStyleAttr), Checkable, View.OnClickListener{
     private var checked = false
 
     companion object {
-       private val CHECKED_STATE_SET = intArrayOf(android.R.attr.state_checked)
+        private val CHECKED_STATE_SET = intArrayOf(android.R.attr.state_checked)
     }
 
     init {
@@ -42,5 +44,6 @@ class CheckableImageView @JvmOverloads constructor(
     override fun onClick(v: View?) {
         toggle()
     }
+
 
 }
